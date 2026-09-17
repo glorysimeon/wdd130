@@ -1,8 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: darkblue;
     --color: white;
     --secondary-color: #5d023b;
     --border-color: rgba(0, 0, 0, 0.2);
+    --text-color: white;
+
 }
 
 nav {
@@ -11,11 +19,28 @@ nav {
 
 }
 
+/* Navigation links */
 nav a {
     color: var(--color);
+    text-decoration: none;
     display: block;
     padding: 20px;
 
+}
+
+nav a:visited {
+    color: var(--color);
+}
+
+/* Link inside the box */
+aside a,
+aside a:visited {
+    color: var(--color);
+}
+
+h1 {
+
+    color: var(--primary-color);
 }
 
 img {
@@ -32,22 +57,8 @@ main {
 
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    box-shadow: 0 0 10px var(--secondary-color);
-
-}
-
-p {
-
-    padding: 0;
-
-}
-
 aside {
+    position: relative;
     width: 20em;
     margin: 1em;
     border: 1px solid var(--border-color);
@@ -58,6 +69,13 @@ aside {
 
 }
 
+aside h2 {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    color: var(--secondary-color);
+}
+
 aside img {
 
     width: 200px;
@@ -65,10 +83,18 @@ aside img {
 
 }
 
-h1 {
+main img {
+    float: right;
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    box-shadow: 0 0 10px var(--secondary-color);
 
-    color: var(--primary-color);
+}
 
+p {
+    padding: 0;
 }
 
 footer {
@@ -76,4 +102,18 @@ footer {
     border-top: 1px solid #f704d3;
     text-align: center;
 
+}
+
+/* css class selectors */
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.box a,
+.box a :visited {
+    color: var(--color);
 }
