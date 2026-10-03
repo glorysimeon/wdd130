@@ -76,7 +76,7 @@ nav a {
 }
 
 .company-info p {
-    margin-bottom: 0.3rem 0;
+    margin-bottom: 0.3rem;
 }
 
 .map iframe {
@@ -105,7 +105,7 @@ nav a {
 }
 
 .contact-item label,
-input {
+.contact-item input {
     margin-bottom: 0.25rem;
     font-weight: bold;
 }
@@ -115,6 +115,16 @@ input {
     align-items: center;
     gap: 1rem;
 
+}
+
+.contact-item input[type="text"],
+.contact-item input[type="email"],
+.contact-item select,
+.contact-item textarea {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .employees-profile h2 {
@@ -129,30 +139,12 @@ form {
     text-align: left;
 }
 
-.contact-item[type="text"],
-.contact[type="email"],
-.contact-item select,
-.contact-item textarea {
-    width: 100%;
-    padding: .75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-top: 1rem;
-
-}
-
 fieldset {
     padding: 1rem;
     margin-bottom: 1rem;
 }
 
-.checkbox-group[type="checkbox"] {
+.checkbox-group input[type="checkbox"] {
     width: 22px;
     height: 22px;
     cursor: pointer;
